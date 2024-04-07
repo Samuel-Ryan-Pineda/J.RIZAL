@@ -196,14 +196,14 @@ p {
     }
 }
 
-@media (max-width: 414.68px) {
+@media (max-width: 414.98px) {
     .triangles {
-        margin-top: -80px;
+        margin-top: -70px;
     }
 
     .home-content {
         position: relative;
-        margin-top: -330px;
+        margin-top: -310px;
     }
 
     p {
@@ -212,12 +212,12 @@ p {
 
     .paragraph1 {
         text-align: left;
-        padding-right: 15px;
+        padding-right: 17px;
     }
     
     .paragraph2 {
         text-align: right;
-        padding-left: 15px;
+        padding-left: 30px;
     }
 
     .button1 {
@@ -233,16 +233,20 @@ p {
         width: 120px;
         z-index: 1001;
     }
+    
+    .fullwidthbg {
+        margin-top: -200px;
+    }
 }
 
-@media (max-width: 360.68px) {
+@media (max-width: 412.98px) {
     .triangles {
-        margin-top: -80px;
+        margin-top: -70px;
     }
 
     .home-content {
         position: relative;
-        margin-top: -300px;
+        margin-top: -310px;
     }
 
     p {
@@ -251,7 +255,50 @@ p {
 
     .paragraph1 {
         text-align: left;
-        padding-right: 15px;
+        padding-right: 17px;
+    }
+    
+    .paragraph2 {
+        text-align: right;
+        padding-left: 20px;
+    }
+
+    .button1 {
+        border-radius: 0 50px 50px 0;
+        width: 120px;
+        z-index: 1001;
+        background-color: #ECECEC;
+        color: #0C0C0C;
+    }
+    
+    .button2 {
+        border-radius: 50px 0 0 50px;
+        width: 120px;
+        z-index: 1001;
+    }
+    
+    .fullwidthbg {
+        margin-top: -200px;
+    }
+}
+
+@media (max-width: 360.68px) {
+    .triangles {
+        margin-top: -70px;
+    }
+
+    .home-content {
+        position: relative;
+        margin-top: -280px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .paragraph1 {
+        text-align: left;
+        padding-right: 13px;
     }
     
     .paragraph2 {
@@ -1202,3 +1249,33 @@ p {
     right: -500px;
 }
 
+
+@media (max-width: 414.98px) {
+    .full-width-bg {
+        padding-top: 20px;
+    }
+
+    #earlylife {
+        margin-top: -180px;
+    }
+}
+
+@media (max-width: 412.98px) {
+    .full-width-bg {
+        padding-top: 20px;
+    }
+
+    #earlylife {
+        margin-top: -180px;
+    }
+}
+
+@media (max-width: 360.68px) {
+    .full-width-bg {
+        padding-top: 20px;
+    }
+
+    #earlylife {
+        margin-top: -200px;
+    }
+}
