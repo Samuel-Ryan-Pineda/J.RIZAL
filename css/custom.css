@@ -9,11 +9,12 @@ body {
     background-color: #ECECEC;
     color: #0C0C0C;
     font-family: "Philosopher", sans-serif;
+    overflow-x: hidden;
 }
 
-body::-webkit-scrollbar {
+/*body::-webkit-scrollbar {
     display: none;
-}
+}*/
 
 h1 {
     letter-spacing: 2px;
