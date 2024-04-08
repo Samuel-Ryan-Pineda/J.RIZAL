@@ -9,7 +9,6 @@ body {
     background-color: #ECECEC;
     color: #0C0C0C;
     font-family: "Philosopher", sans-serif;
-    overflow-x: hidden;
 }
 
 /*body::-webkit-scrollbar {
@@ -944,8 +943,6 @@ p {
     border-radius: 20px;
     padding: 20px;
     transition: 0.5s;
-    box-shadow: 0px 3px 21px rgba(3, 7, 18, 0.2),
-                0px 12px 83px rgba(3, 7, 18, 0.3);
 }
 
 #next {
@@ -1217,6 +1214,11 @@ p {
 }
 
 .references {
+    max-width: 100%;
+    text-align: justify;
+}
+
+.references p{
     text-align: justify;
 }
 
@@ -1278,4 +1280,16 @@ p {
     #earlylife {
         margin-top: -200px;
     }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#travels {
+    overflow-y: hidden;
+}
+
+#travels::-webkit-scrollbar {
+    display: none;
 }
