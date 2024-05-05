@@ -190,26 +190,33 @@ prev.onclick = function () {
 }
 
 document.getElementById("contactForm").addEventListener("submit", function(event) {
-  event.preventDefault();
-  let formData = new FormData(this);
+  event.preventDefault(); // Prevent the default form submission behavior
   
-  fetch("submit_form.php", {
-      method: "POST",
-      body: formData
+  // Submit the form data to Formspree
+  let form = event.target;
+  let formData = new FormData(form);
+  
+  fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+          'Accept': 'application/json'
+      }
   })
   .then(response => {
       if (!response.ok) {
           throw new Error("Network response was not ok");
       }
-      return response.text();
+      return response.json(); // Parse the JSON response from Formspree
   })
   .then(data => {
+      // Handle the response from Formspree
       alert("Form submitted successfully");
-      // Optionally, you can redirect the user to another page after successful submission
-      // window.location.href = "thankyou.html";
+      form.reset(); // Reset the form after successful submission
   })
   .catch(error => {
       console.error("Error:", error);
       alert("There was an error submitting the form. Please try again later.");
   });
 });
+
