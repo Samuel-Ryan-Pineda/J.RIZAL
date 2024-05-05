@@ -220,3 +220,30 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   });
 });
 
+
+
+// Function to fetch and display submitted messages
+function fetchAndDisplayMessages() {
+  fetch('https://formspree.io/api/v1/form/xgegdrke/submissions')
+      .then(response => response.json())
+      .then(data => {
+          const messagesContainer = document.getElementById('messages-container');
+          data.forEach(submission => {
+              const message = submission.data;
+              const messageElement = document.createElement('div');
+              messageElement.classList.add('message');
+              messageElement.innerHTML = `
+                  <p><label>Name:</label> ${message.name}</p>
+                  <p><label>Email:</label> ${message._replyto}</p>
+                  <p><label>Message:</label> ${message.message}</p>
+              `;
+              messagesContainer.appendChild(messageElement);
+          });
+      })
+      .catch(error => {
+          console.error('Error fetching messages:', error);
+      });
+}
+
+// Call the function to fetch and display messages when the page loads
+fetchAndDisplayMessages();
