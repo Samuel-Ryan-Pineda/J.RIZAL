@@ -220,13 +220,13 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   });
 });
 
-
-
 // Function to fetch and display submitted messages
 function fetchAndDisplayMessages() {
+  console.log('Fetching messages...');
   fetch('https://formspree.io/api/v1/form/xgegdrke/submissions')
       .then(response => response.json())
       .then(data => {
+          console.log('Received messages:', data);
           const messagesContainer = document.getElementById('messages-container');
           data.forEach(submission => {
               const message = submission.data;
