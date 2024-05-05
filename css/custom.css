@@ -596,7 +596,7 @@ p {
 
     .centered-text h1 {
         padding-top: 7px;
-        font-size: 5vw; /* Adjust as needed */
+        font-size: 4.3vw; /* Adjust as needed */
     }
 }
 
@@ -1292,4 +1292,46 @@ body {
 
 #travels::-webkit-scrollbar {
     display: none;
+}
+
+.contact-form {
+    max-width: 100%; /* Set a maximum width for the form */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+/* Style form elements */
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%; /* Make inputs and textarea stretch to fill the container */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 100px; /* Set a fixed height for the textarea */
+}
+
+.contact-form button {
+    width: 100%; /* Make button stretch to fill the container */
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Style button on hover */
+.contact-form button:hover {
+    background-color: #0056b3;
 }

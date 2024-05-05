@@ -189,3 +189,27 @@ prev.onclick = function () {
     loadShow();
 }
 
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  let formData = new FormData(this);
+  
+  fetch("submit_form.php", {
+      method: "POST",
+      body: formData
+  })
+  .then(response => {
+      if (!response.ok) {
+          throw new Error("Network response was not ok");
+      }
+      return response.text();
+  })
+  .then(data => {
+      alert("Form submitted successfully");
+      // Optionally, you can redirect the user to another page after successful submission
+      // window.location.href = "thankyou.html";
+  })
+  .catch(error => {
+      console.error("Error:", error);
+      alert("There was an error submitting the form. Please try again later.");
+  });
+});
