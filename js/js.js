@@ -223,7 +223,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 // Function to fetch and display submitted messages
 function fetchAndDisplayMessages() {
   console.log('Fetching messages...');
-  fetch('https://formspree.io/api/v1/form/xgegdrke/submissions')
+  fetch('https://formspree.io/forms/xgegdrke/submissions')
       .then(response => response.json())
       .then(data => {
           console.log('Received messages:', data);
